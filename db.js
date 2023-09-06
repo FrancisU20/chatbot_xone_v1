@@ -1,31 +1,38 @@
-const Excel = require('exceljs');
+const Excel = require("exceljs");
 
 // Función para leer el archivo de Excel y obtener la información de la Hoja1
 async function readExcelFile(filename) {
   const workbook = new Excel.Workbook();
-  
+
   try {
     await workbook.xlsx.readFile(filename);
-    const worksheet = workbook.getWorksheet('Hoja1'); // Cambia 'Hoja1' al nombre de tu hoja
-    
+    const worksheet = workbook.getWorksheet("Hoja1"); // Cambia 'Hoja1' al nombre de tu hoja
+
     const data = [];
     worksheet.eachRow((row, rowNumber) => {
-      if (rowNumber !== 1) { // Ignorar encabezados
+      if (rowNumber !== 1) {
+        // Ignorar encabezados
         const rowData = [];
         row.eachCell((cell) => {
-          if (cell.value === null) {
-            rowData.push("CELDAS VACÍAS");
+          // Obtener el valor de la celda
+          const cellValue = cell.text || cell.value;
+          // Verificar si la celda está vacía o si su valor es null o undefined
+          if (
+            cellValue === null ||
+            cellValue === undefined ||
+            cellValue.toString().trim() === ""
+          ) {
+            rowData.push("PENDIENTE");
           } else {
-            rowData.push(cell.value);
+            rowData.push(cellValue);
           }
         });
         data.push(rowData);
       }
     });
-    
     return data;
   } catch (error) {
-    console.error('Error reading Excel file:', error.message);
+    console.error("Error reading Excel file:", error.message);
     return [];
   }
 }

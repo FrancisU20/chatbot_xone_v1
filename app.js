@@ -84,27 +84,17 @@ async function createFlowProjects(areaString = "") {
   let messageCTX = "";
 
   for (const project of filteredProjects) {
-    const projectEndDate = new Date(project.endDate);
-    const formattedEndDate = projectEndDate.toLocaleDateString('es-ES', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      hour: 'numeric',
-      minute: 'numeric',
-      second: 'numeric',
-      timeZoneName: 'short',
-    });
     const projectItem = addKeyword([`${project.id}`])
       .addAnswer(
         [
           `*${project.name}*`,
           `*DESCRIPCIÓN:* ${project.description}`,
-          `*LIDER DE PROYECTO:* ${project.areaLead}`,
-          `*LIDER DE PRODUCTO:* ${project.teachLead}`,
-          `*RESPONSABLE DE PROYECTO:* ${project.qa}`,
+          `*RESPONSABLE DE ÁREA:* ${project.areaLead}`,
+          `*RESPONSABLE DE DESARROLLO:* ${project.teachLead}`,
+          `*RESPONSABLE DEL PROYECTO:* ${project.qa}`,
           `*ESTADO:* ${project.status} (${project.progress})`, //Unir el progreso con el estado
           `*OBSERVACIONES:* ${project.observations}`,
-          `*FECHA DE FINALIZACIÓN:* ${String(formattedEndDate)}`,
+          `*FECHA DE FINALIZACIÓN:* ${project.endDate}`,
         ],
         null,
         async (ctx, { flowDynamic }) => {
@@ -170,12 +160,12 @@ async function createJSONProjects() {
     const projectLeader = project[3];
     const projectTeachLead = project[4];
     const projectQA = project[5];
-    const projectProgress = project[7];
-    const projectStatus = project[9];
-    const projectArea = project[10];
-    const projectObservations = project[11];
-    const projectDetails = project[12];
-    const projectEndDate = project[13];
+    const projectProgress = project[13];
+    const projectStatus = project[15];
+    const projectArea = project[16];
+    const projectObservations = project[17];
+    const projectDetails = project[18];
+    const projectEndDate = project[19];
 
     const jsonProject = {
       id: projectId,
@@ -194,7 +184,6 @@ async function createJSONProjects() {
 
     projects.push(jsonProject);
   }
-
   return projects;
 }
 
@@ -205,7 +194,7 @@ async function createJSONArea() {
 
   for (let index = 0; index < excelData.length; index++) {
     const area = excelData[index];
-    const areaName = area[10];
+    const areaName = area[16];
 
     const jsonAreaLeader = {
       id: assignLetter(index) + ((index % 10) + 1),
