@@ -59,7 +59,7 @@ async function createFlowProjectDetails(areaString = "") {
 
     const projectItem = addKeyword([`${project.id}`]).addAnswer(
       [
-        `*DETALLES:* ${projectdetails}`,
+        `*DETALLES:* \n ${projectdetails}`,
         "\nEscribe 👉 *SALIR* al terminar de consultar.",
       ],
       null,
