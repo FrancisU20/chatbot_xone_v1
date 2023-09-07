@@ -6,7 +6,7 @@ async function readExcelFile(filename) {
 
   try {
     await workbook.xlsx.readFile(filename);
-    const worksheet = workbook.getWorksheet("Hoja1"); // Cambia 'Hoja1' al nombre de tu hoja
+    const worksheet = workbook.getWorksheet("Indice"); // Cambia 'Hoja1' al nombre de tu hoja
 
     const data = [];
     worksheet.eachRow((row, rowNumber) => {
