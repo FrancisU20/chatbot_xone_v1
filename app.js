@@ -148,7 +148,7 @@ async function createFlowProjectsByArea() {
 }
 
 async function createJSONProjects() {
-  const excelFileName = "ProyectosEjemplo.xlsx";
+  const excelFileName = "Proyectos.xlsx";
   const excelData = await readExcelFile(excelFileName);
   const projects = [];
 
@@ -160,12 +160,12 @@ async function createJSONProjects() {
     const projectLeader = project[3];
     const projectTeachLead = project[4];
     const projectQA = project[5];
-    const projectProgress = project[13];
-    const projectStatus = project[15];
-    const projectArea = project[16];
-    const projectObservations = project[17];
-    const projectDetails = project[18];
-    const projectEndDate = project[19];
+    const projectProgress = project[6];
+    const projectStatus = project[7];
+    const projectArea = project[8];
+    const projectObservations = project[9];
+    const projectDetails = project[10];
+    const projectEndDate = project[11];
 
     const jsonProject = {
       id: projectId,
@@ -188,13 +188,13 @@ async function createJSONProjects() {
 }
 
 async function createJSONArea() {
-  const excelFileName = "ProyectosEjemplo.xlsx";
+  const excelFileName = "Proyectos.xlsx";
   const excelData = await readExcelFile(excelFileName);
   const areaArray = [];
 
   for (let index = 0; index < excelData.length; index++) {
     const area = excelData[index];
-    const areaName = area[16];
+    const areaName = area[8];
 
     const jsonAreaLeader = {
       id: assignLetter(index) + ((index % 10) + 1),
