@@ -55,11 +55,11 @@ async function createFlowProjectDetails(areaString = "") {
 
     cadenaOriginal = String(cadenaOriginal);
 
-    let projectdetails = cadenaOriginal.replace(/\$/g, "\n*-* ");
+    let projectdetails = cadenaOriginal.replace(/\$/g, "\n *-* ");
 
     const projectItem = addKeyword([`${project.id}`]).addAnswer(
       [
-        `*DETALLES:* \n\n-${projectdetails}`,
+        `*DETALLES:* \n\n *-* ${projectdetails}`,
         "\nEscribe 👉 *SALIR* al terminar de consultar.",
       ],
       null,
