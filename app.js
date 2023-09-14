@@ -16,14 +16,13 @@ const flowSalir = addKeyword(["salir"]).addAnswer([
   "Escribe 👉 *HOLA* para reiniciar el bot.",
 ]);
 
-async function createMainFlow() {
-  const areas = await createJSONArea();
-
+async function MainFlow() {
+  const deps = await createJSONDeps();
   const flowPrincipal = addKeyword(["hola", "menu", "menú", "inicio","Hola", "Menu", "Menú", "Inicio"])
     .addAnswer("🙌 Hola, bienvenido a *XOneBot*")
     .addAnswer([
-      "*Seleccione un área antes de continuar:*\n",
-      areas.map((area) => `👉 *${area.id}:* ${area.name}`).join("\n"),
+      "*Seleccione un departamento antes de continuar:*\n",
+      deps.map((dep) => `👉 *${dep.id}:* ${dep.name}`).join("\n"),
     ])
     .addAnswer(
       [
@@ -31,13 +30,13 @@ async function createMainFlow() {
       ],
       null,
       null,
-      await createFlowProjectsByArea()
+      await areasByDeparmentFlow()
     );
 
   return flowPrincipal;
 }
 
-async function createFlowProjectDetails(areaString = "") {
+async function projectDetailsFlow(areaString = "") {
   const projects = await createJSONProjects();
 
   const filteredProjects = projects.filter(
@@ -72,7 +71,7 @@ async function createFlowProjectDetails(areaString = "") {
   return flowProjects;
 }
 
-async function createFlowProjects(areaString = "") {
+async function projectInfoFlow(areaString = "") {
   const projects = await createJSONProjects();
 
   const filteredProjects = projects.filter(
@@ -110,7 +109,7 @@ async function createFlowProjects(areaString = "") {
         ],
         null,
         null,
-        await createFlowProjectDetails(areaString)
+        await projectDetailsFlow(areaString)
       );
     flowProjects.push(projectItem);
   }
@@ -118,7 +117,8 @@ async function createFlowProjects(areaString = "") {
   return flowProjects;
 }
 
-async function createFlowProjectsByArea() {
+
+async function projectsByAreaFlow() {
   const areas = await createJSONArea();
   const projects = await createJSONProjects();
   const flowAreas = [];
@@ -138,7 +138,7 @@ async function createFlowProjectsByArea() {
         ],
         null,
         null,
-        await createFlowProjects(area.name)
+        await projectInfoFlow(area.name)
       );
     flowAreas.push(areaItem);
     flowAreas.push(flowSalir);
@@ -146,6 +146,36 @@ async function createFlowProjectsByArea() {
 
   return flowAreas;
 }
+
+async function areasByDeparmentFlow() {
+  const deps = await createJSONDeps();
+  const areas = await createJSONArea();
+  const flowAreas = [];
+
+  for (const dep of deps) {
+    const areaItem = addKeyword([`${dep.id}`])
+      .addAnswer([`Ha seleccionado al departamento de: *${dep.name}*`])
+      .addAnswer([
+        areas
+          .filter((area) => area.dep === dep.name)
+          .map((area) => `👉 *${area.id}:* ${area.name}`)
+          .join("\n"),
+      ])
+      .addAnswer(
+        [
+          "🔴Si tuviste un error al tipear escribe: \n👉 *MENU* \nPara reiniciar el bot.🔴",
+        ],
+        null,
+        null,
+        await projectsByAreaFlow(dep.name)
+      );
+    flowAreas.push(areaItem);
+    flowAreas.push(flowSalir);
+  }
+
+  return flowAreas;
+}
+
 
 async function createJSONProjects() {
   const excelFileName = "Proyectos.xlsx";
@@ -162,10 +192,11 @@ async function createJSONProjects() {
     const projectQA = project[5];
     const projectProgress = project[6];
     const projectStatus = project[7];
-    const projectArea = project[8];
-    const projectObservations = project[9];
-    const projectDetails = project[10];
-    const projectEndDate = project[11];
+    const projectDep = project[8];
+    const projectArea = project[9];
+    const projectObservations = project[10];
+    const projectDetails = project[11];
+    const projectEndDate = project[12];
 
     const jsonProject = {
       id: projectId,
@@ -176,6 +207,7 @@ async function createJSONProjects() {
       qa: projectQA,
       progress: (projectProgress * 100).toFixed(2) + "%",
       status: projectStatus,
+      dep: projectDep,
       area: projectArea,
       observations: projectObservations,
       details: projectDetails,
@@ -194,10 +226,12 @@ async function createJSONArea() {
 
   for (let index = 0; index < excelData.length; index++) {
     const area = excelData[index];
-    const areaName = area[8];
+    const areaDep = area[8];
+    const areaName = area[9];
 
     const jsonAreaLeader = {
       id: assignLetter(index) + ((index % 10) + 1),
+      dep: areaDep,
       name: areaName,
     };
 
@@ -207,6 +241,28 @@ async function createJSONArea() {
   }
 
   return areaArray;
+}
+
+async function createJSONDeps() {
+  const excelFileName = "Proyectos.xlsx";
+  const excelData = await readExcelFile(excelFileName);
+  const depsArray = [];
+
+  for (let index = 0; index < excelData.length; index++) {
+    const dep = excelData[index];
+    const depName = dep[8];
+
+    const jsonDep = {
+      id: assignLetter(index) + ((index % 10) + 1),
+      name: depName,
+    };
+
+    if (!depsArray.some((dep) => dep.name === depName)) {
+      depsArray.push(jsonDep);
+    }
+  }
+
+  return depsArray;
 }
 
 function assignLetter(index) {
@@ -221,7 +277,7 @@ function assignLetter(index) {
 }
 
 const main = async () => {
-  const flowPrincipal = await createMainFlow();
+  const flowPrincipal = await MainFlow();
 
   const adapterFlow = createFlow([flowPrincipal]);
   const adapterDB = new MockAdapter();

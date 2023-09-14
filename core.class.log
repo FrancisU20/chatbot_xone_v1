@@ -1,176 +1,211 @@
 [handleMsg]:  {
   key: {
-    remoteJid: '593979062649@s.whatsapp.net',
+    remoteJid: '593967645647@s.whatsapp.net',
     fromMe: false,
-    id: 'D8EFF47C1CEFE196FBDD71BE74FEFB43',
+    id: '3EB0C5F09B9DE5481616D4',
     participant: undefined
   },
-  messageTimestamp: 1693951949,
-  pushName: 'Esteban Vásquez',
+  messageTimestamp: 1694726099,
+  pushName: 'Janeth',
   broadcast: false,
   message: Message {
-    conversation: 'Hola',
+    conversation: 'menu',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: 'Hola',
-  from: '593979062649'
+  body: 'menu',
+  from: '593967645647'
 }
 [handleMsg]:  {
   key: {
-    remoteJid: '593979062649@s.whatsapp.net',
+    remoteJid: '593967021192@s.whatsapp.net',
     fromMe: false,
-    id: 'BCA9D043EB93E6FE44D37BFA39357328',
+    id: '3A8C042D335E02135341',
     participant: undefined
   },
-  messageTimestamp: 1693951955,
-  pushName: 'Esteban Vásquez',
+  messageTimestamp: 1694726121,
+  pushName: 'Fernanda Ruales',
   broadcast: false,
   message: Message {
-    conversation: 'B2',
+    conversation: 'Pancho la mamá de la Dafne tal vez te escribió',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: 'B2',
-  from: '593979062649'
+  body: 'Pancho la mamá de la Dafne tal vez te escribió',
+  from: '593967021192'
 }
 [handleMsg]:  {
   key: {
-    remoteJid: '593979062649@s.whatsapp.net',
+    remoteJid: '593967021192@s.whatsapp.net',
     fromMe: false,
-    id: '3C82831FD4FED86B5C062BA45F85E44B',
+    id: '3A6C6D0E1C3715CB0BE8',
     participant: undefined
   },
-  messageTimestamp: 1693951964,
-  pushName: 'Esteban Vásquez',
+  messageTimestamp: 1694726126,
+  pushName: 'Fernanda Ruales',
   broadcast: false,
   message: Message {
-    conversation: 'B10',
+    conversation: 'Para eso de la piscina',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: 'B10',
-  from: '593979062649'
+  body: 'Para eso de la piscina',
+  from: '593967021192'
 }
 [handleMsg]:  {
   key: {
-    remoteJid: '593979062649@s.whatsapp.net',
+    remoteJid: '593967645647@s.whatsapp.net',
     fromMe: false,
-    id: '86015BC29668E389943598590E562A29',
+    id: '3EB079F5AC41212A1318C6',
     participant: undefined
   },
-  messageTimestamp: 1693952003,
-  pushName: 'Esteban Vásquez',
+  messageTimestamp: 1694726158,
+  pushName: 'Janeth',
   broadcast: false,
   message: Message {
-    conversation: 'B10',
+    conversation: 'a6',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: 'B10',
-  from: '593979062649'
+  body: 'a6',
+  from: '593967645647'
 }
 [handleMsg]:  {
   key: {
-    remoteJid: '593979062649@s.whatsapp.net',
+    remoteJid: '593967645647@s.whatsapp.net',
     fromMe: false,
-    id: '118D58534D924D8CE92E243B1C3FC702',
+    id: '3EB09FB5BFD289913F8058',
     participant: undefined
   },
-  messageTimestamp: 1693952007,
-  pushName: 'Esteban Vásquez',
+  messageTimestamp: 1694726182,
+  pushName: 'Janeth',
   broadcast: false,
   message: Message {
-    conversation: 'Salir',
+    conversation: 'menu',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: 'Salir',
-  from: '593979062649'
+  body: 'menu',
+  from: '593967645647'
 }
 [handleMsg]:  {
   key: {
-    remoteJid: '593979062649@s.whatsapp.net',
+    remoteJid: '593967645647@s.whatsapp.net',
     fromMe: false,
-    id: '454E7B664CFF02514C88B4D535E933AB',
+    id: '3EB00A633B46A3B2E5967D',
     participant: undefined
   },
-  messageTimestamp: 1693952011,
-  pushName: 'Esteban Vásquez',
+  messageTimestamp: 1694726190,
+  pushName: 'Janeth',
   broadcast: false,
   message: Message {
-    conversation: 'Hola',
+    conversation: 'd10',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: 'Hola',
-  from: '593979062649'
+  body: 'd10',
+  from: '593967645647'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '593967645647@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0F2A062E1F154924B8F',
+    participant: undefined
+  },
+  messageTimestamp: 1694726206,
+  pushName: 'Janeth',
+  broadcast: false,
+  message: Message {
+    conversation: 'salir',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'salir',
+  from: '593967645647'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '593967645647@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0DB2D1051199E7FF8DB',
+    participant: undefined
+  },
+  messageTimestamp: 1694726324,
+  pushName: 'Janeth',
+  broadcast: false,
+  message: Message {
+    conversation: 'menu',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'menu',
+  from: '593967645647'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '593997215828@s.whatsapp.net',
     fromMe: false,
-    id: '477FD821AFF81CF8E39C8275BD9F6020',
+    id: '13004BB42C6F49676A2D07C889AF2168',
     participant: undefined
   },
-  messageTimestamp: 1693952279,
+  messageTimestamp: 1694726325,
   pushName: 'Klaus',
   broadcast: false,
   message: Message {
-    extendedTextMessage: ExtendedTextMessage {
-      text: 'Hola',
-      previewType: 0,
-      contextInfo: [ContextInfo],
-      inviteLinkGroupTypeV2: 0
-    },
+    conversation: 'Menu',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: 'Hola',
+  body: 'Menu',
   from: '593997215828'
 }
 [handleMsg]:  {
   key: {
-    remoteJid: '593997215828@s.whatsapp.net',
+    remoteJid: '593967645647@s.whatsapp.net',
     fromMe: false,
-    id: '79A023940A9413DF63E293944C057CB6',
+    id: '3EB0504DD49F79A01E58A6',
     participant: undefined
   },
-  messageTimestamp: 1693952308,
-  pushName: 'Klaus',
+  messageTimestamp: 1694726340,
+  pushName: 'Janeth',
   broadcast: false,
   message: Message {
-    conversation: 'A7',
+    conversation: 'd10',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: 'A7',
-  from: '593997215828'
+  body: 'd10',
+  from: '593967645647'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '593997215828@s.whatsapp.net',
     fromMe: false,
-    id: '6490C047296EC754B0134C1E62A54E73',
+    id: 'E93D03D128DB9A6505BAF83D942FE4F4',
     participant: undefined
   },
-  messageTimestamp: 1693952333,
+  messageTimestamp: 1694726352,
   pushName: 'Klaus',
   broadcast: false,
   message: Message {
@@ -187,30 +222,10 @@
   key: {
     remoteJid: '593997215828@s.whatsapp.net',
     fromMe: false,
-    id: '3C4FAC6B1061553ADA6766B913DD5910',
+    id: '2392B5DF1914352B6737B62ECA5D3CDE',
     participant: undefined
   },
-  messageTimestamp: 1693952342,
-  pushName: 'Klaus',
-  broadcast: false,
-  message: Message {
-    conversation: 'Menu',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: 'Menu',
-  from: '593997215828'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '593997215828@s.whatsapp.net',
-    fromMe: false,
-    id: '2372BB56697B924C455F3E1799EB06AC',
-    participant: undefined
-  },
-  messageTimestamp: 1693952350,
+  messageTimestamp: 1694726359,
   pushName: 'Klaus',
   broadcast: false,
   message: Message {
@@ -227,70 +242,70 @@
   key: {
     remoteJid: '593997215828@s.whatsapp.net',
     fromMe: false,
-    id: 'FC30A4B77545B9F8E48358654F8FA303',
+    id: '3EB0B647E67B78061C604D',
     participant: undefined
   },
-  messageTimestamp: 1693952358,
+  messageTimestamp: 1694726425,
   pushName: 'Klaus',
   broadcast: false,
   message: Message {
-    conversation: 'A10',
+    conversation: 'a10',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: 'A10',
+  body: 'a10',
   from: '593997215828'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '593997215828@s.whatsapp.net',
     fromMe: false,
-    id: 'DB386E9CE43020B55D8F9E468D878A03',
+    id: '3EB0D603923DC2EF6F6D7A',
     participant: undefined
   },
-  messageTimestamp: 1693952397,
+  messageTimestamp: 1694726431,
   pushName: 'Klaus',
   broadcast: false,
   message: Message {
-    conversation: 'A10',
+    conversation: 'a10',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: 'A10',
+  body: 'a10',
   from: '593997215828'
 }
 [handleMsg]:  {
   key: {
-    remoteJid: '593997215828@s.whatsapp.net',
+    remoteJid: '593967645647@s.whatsapp.net',
     fromMe: false,
-    id: 'FAC86E0B3DA3C91BD38F111F9DC2DD75',
+    id: '3EB03FA2EEC7C4F4673E14',
     participant: undefined
   },
-  messageTimestamp: 1693952473,
-  pushName: 'Klaus',
+  messageTimestamp: 1694726498,
+  pushName: 'Janeth',
   broadcast: false,
   message: Message {
-    conversation: 'Menu',
+    conversation: 'a4',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: 'Menu',
-  from: '593997215828'
+  body: 'a4',
+  from: '593967645647'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '593997215828@s.whatsapp.net',
     fromMe: false,
-    id: 'D9248B30A9B013FAB2541919F439EE86',
+    id: 'CDCED486F3667B21EDF55A08DC88D2AA',
     participant: undefined
   },
-  messageTimestamp: 1693952485,
+  messageTimestamp: 1694726498,
   pushName: 'Klaus',
   broadcast: false,
   message: Message {
@@ -301,85 +316,5 @@
     }
   },
   body: 'Salir',
-  from: '593997215828'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '593997215828@s.whatsapp.net',
-    fromMe: false,
-    id: 'C680737833577F9DFE538E54E40BD7F4',
-    participant: undefined
-  },
-  messageTimestamp: 1693952500,
-  pushName: 'Klaus',
-  broadcast: false,
-  message: Message {
-    conversation: 'Salir',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: 'Salir',
-  from: '593997215828'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '593997215828@s.whatsapp.net',
-    fromMe: false,
-    id: 'FF6E847BA64FF49715B6A99AF0032CF6',
-    participant: undefined
-  },
-  messageTimestamp: 1693952510,
-  pushName: 'Klaus',
-  broadcast: false,
-  message: Message {
-    conversation: 'Menu',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: 'Menu',
-  from: '593997215828'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '593997215828@s.whatsapp.net',
-    fromMe: false,
-    id: '0E273A28DBFCF43376B47FF3C282AA26',
-    participant: undefined
-  },
-  messageTimestamp: 1693952518,
-  pushName: 'Klaus',
-  broadcast: false,
-  message: Message {
-    conversation: 'D4',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: 'D4',
-  from: '593997215828'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '593997215828@s.whatsapp.net',
-    fromMe: false,
-    id: 'B72CD3624874D10047D161B200C3EAD8',
-    participant: undefined
-  },
-  messageTimestamp: 1693952535,
-  pushName: 'Klaus',
-  broadcast: false,
-  message: Message {
-    conversation: 'D4',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: 'D4',
   from: '593997215828'
 }
