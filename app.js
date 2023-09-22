@@ -18,7 +18,16 @@ const flowSalir = addKeyword(["salir"]).addAnswer([
 
 async function MainFlow() {
   const deps = await createJSONDeps();
-  const flowPrincipal = addKeyword(["hola", "menu", "menú", "inicio","Hola", "Menu", "Menú", "Inicio"])
+  const flowPrincipal = addKeyword([
+    "hola",
+    "menu",
+    "menú",
+    "inicio",
+    "Hola",
+    "Menu",
+    "Menú",
+    "Inicio",
+  ])
     .addAnswer("🙌 Hola, bienvenido a *XOneBot*")
     .addAnswer([
       "*Seleccione un departamento antes de continuar:*\n",
@@ -55,6 +64,9 @@ async function projectDetailsFlow(areaString = "") {
     cadenaOriginal = String(cadenaOriginal);
 
     let projectdetails = cadenaOriginal.replace(/\$/g, "\n *-*  ");
+    if (projectdetails.charAt(projectdetails.length - 1) === "$") {
+      projectdetails = projectdetails.slice(0, -1);
+    }
 
     const projectItem = addKeyword([`${project.id}`]).addAnswer(
       [
@@ -117,7 +129,6 @@ async function projectInfoFlow(areaString = "") {
   return flowProjects;
 }
 
-
 async function projectsByAreaFlow() {
   const areas = await createJSONArea();
   const projects = await createJSONProjects();
@@ -175,7 +186,6 @@ async function areasByDeparmentFlow() {
 
   return flowAreas;
 }
-
 
 async function createJSONProjects() {
   const excelFileName = "Proyectos.xlsx";
